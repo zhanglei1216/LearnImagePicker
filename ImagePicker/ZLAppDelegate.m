@@ -7,6 +7,7 @@
 //
 
 #import "ZLAppDelegate.h"
+#import "ZLImagePickerViewController.h"
 
 @implementation ZLAppDelegate
 
@@ -15,6 +16,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    ZLImagePickerViewController *imagePickerVC = [[ZLImagePickerViewController alloc] init];
+    self.window.rootViewController = imagePickerVC;
     [self.window makeKeyAndVisible];
     return YES;
 }
